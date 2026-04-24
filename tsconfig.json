@@ -14,7 +14,7 @@
         "name": "next"
       }
     ],
-    "baseUrl": "./",
+    "": "./",
     "paths": {
       "@/*": [
         "./src/*"
@@ -31,9 +31,9 @@
     "skipLibCheck": true
   },
   "include": [
-    "*/.d.ts",
-    "*/.ts",
-    "*/.tsx",
+    "**/.d.ts",
+    "**/.ts",
+    "**/.tsx",
     ".next/types/*/.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts"
