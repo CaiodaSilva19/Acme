@@ -1,7 +1,9 @@
-import { PrismaClient, InvoiceStatus } from '@prisma/client';
-import bcrypt from 'bcryptjs';
+import { PrismaClient, InvoiceStatus } from '@prisma/client'
+import { PrismaPg } from '@prisma/adapter-pg'
+import bcrypt from 'bcryptjs'
 
-const prisma = new PrismaClient();
+const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL })
+const prisma = new PrismaClient({ adapter })
 
 async function main() {
   console.log('Iniciando população do banco de dados...');
@@ -146,7 +148,6 @@ async function main() {
   };
 
   console.log('Dados de receita mensal criados.');
-
   console.log('População concluída com sucesso.');
 };
 
