@@ -28,7 +28,8 @@
       "esnext"
     ],
     "allowJs": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["node"]
   },
   "include": [
     "**/*.d.ts",

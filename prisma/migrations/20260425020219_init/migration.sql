@@ -26,10 +26,10 @@ CREATE TABLE "invoices" (
     "id" TEXT NOT NULL,
     "amount" INTEGER NOT NULL,
     "status" "InvoiceStatus" NOT NULL,
-    "date" TIMESTAMP(3) NOT NULL,
+    "date" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "customer_id" TEXT NOT NULL,
-    "create_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "update_at" TIMESTAMP(3) NOT NULL,
+    "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "invoices_pkey" PRIMARY KEY ("id")
 );
