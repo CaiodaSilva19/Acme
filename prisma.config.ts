@@ -9,4 +9,7 @@ export default {
   datasource: {
     url: process.env.DATABASE_URL ?? '',
   },
+  migrations: {
+    seed: 'npx tsx --tsconfig tsconfig.json prisma/seed.ts',
+  },
 } satisfies PrismaConfig
